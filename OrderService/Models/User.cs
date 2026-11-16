@@ -1,0 +1,16 @@
+namespace OrderService.Models;
+
+// Копія моделі з UserService: OrderService отримує її по HTTP
+public class User
+{
+    public int Id { get; set; }
+    public string FirstName { get; set; } = string.Empty;
+    public string LastName { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+}
+
+public class UserOrders
+{
+    public User User { get; set; } = new();
+    public List<Order> Orders { get; set; } = new();
+}
